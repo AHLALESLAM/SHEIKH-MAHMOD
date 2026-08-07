@@ -9,22 +9,17 @@
         h1 {
             border: 5px solid rgb(45, 8, 104);
             width: 50%;
-            /* تحديد الحجم بـ 50% من الشاشة */
             height: 50px;
             text-align: center;
             line-height: 50px;
             background-color: rgb(162, 165, 158);
-
-            /* التوسيط في المنتصف أفقياً */
             margin: 0 auto;
         }
 
         #d0 {
             display: flex;
             justify-content: center;
-            /* وضع المربعين في منتصف الشاشة */
             gap: 50px;
-            /* تحديد المسافة الفاصلة بينهما بـ 50px */
             padding: 30px;
         }
 
@@ -32,7 +27,6 @@
             display: inline-block;
             width: 200px;
             height: 100px;
-
             background-position: center right;
             background-size: 100% 100%;
             background-repeat: no-repeat;
@@ -59,9 +53,7 @@
             justify-content: center;
             margin-top: 20px;
             font-size: 20px;
-            /* يمكنك زيادة الرقم حسب رغبتك مثل 22px أو 24px */
             font-weight: bold;
-            /* اختيار اختياري لجعل الخط عريضًا */
         }
 
         button:hover {
@@ -69,13 +61,41 @@
             background-color: rgba(45, 8, 104, 0.411);
         }
 
-        /* تعديل المبدل من .d3 إلى #d3 لتتحرك العنصر بدقة */
+        /* تحريك الزرار الأول بشكل مستقل */
         #d3 {
             position: absolute;
-            bottom: 80px;
-            /* يبعد 80px من الأعلى بدقة */
+            bottom: 70px;
             right: 20px;
-            /* يبعد 20px من اليمين بدقة */
+            width: 200px;
+            height: 100px;
+        }
+
+        /* تحريك الزرار الثاني بشكل مستقل تمامًا */
+        #d4 {
+            position: absolute;
+            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
+            right: 240px;  /* اضبط المسافة من اليمين بشكل مستقل */
+            width: 200px;
+            height: 100px;
+        }
+         #d5 {
+            position: absolute;
+            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
+            right: 460px;  /* اضبط المسافة من اليمين بشكل مستقل */
+            width: 200px;
+            height: 100px;
+        }
+        #d6 {
+            position: absolute;
+            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
+            right: 680px;  /* اضبط المسافة من اليمين بشكل مستقل */
+            width: 200px;
+            height: 100px;
+        }
+        #d7 {
+            position: absolute;
+            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
+            right: 900px;  /* اضبط المسافة من اليمين بشكل مستقل */
             width: 200px;
             height: 100px;
         }
@@ -97,19 +117,36 @@
 
 <body>
     <h1>منصه الاستاذ محمود فاروق</h1>
+    
     <div id="d0">
         <!--<div id="d1">
             <button onclick="window.location.href='quran.html'">القران الكريم و العلوم الشرعيه</button>
         </div>--->
+        
         <div id="d2">
             <button onclick="window.location.href='math.html'">الرياضيات</button>
         </div>
+
         <div id="d3">
             <button id="i1"
-                onclick="window.location.href='mailto:almnshaltlymyhllastadhmhmwdfar@gmail.com=استفسار&body=مرحبًا،%20أود%20الاستفسار%20عن...'">أرسل
+                onclick="window.location.href='mailto:almnshaltlymyhllastadhmhmwdfar@gmail.com?subject=استفسار&body=مرحبًا،%20أود%20الاستفسار%20عن...'">أرسل
                 بريدًا إلكترونيًا</button>
         </div>
 
+        <!-- تم إخراج d4 ليصبح عنصرًا مستقلًا وليس داخل d3 -->
+        <div id="d4">
+            <button id="i2" onclick="window.location.href='https://linktr.ee/almnshaltlymyhllastadhmhmwdfar'">جميع
+                وسائل التواصل</button>
+        </div>
+        <div id="d5">
+            <button id="i3" onclick="window.location.href='https://www.instagram.com/mnshlstdhmhmwd/'">Instagram</button>
+        </div>
+         <div id="d6">
+            <button id="i4" onclick="window.location.href='https://www.facebook.com/profile.php?id=61593142946300&locale=ar_AR'">فيس بوك</button>
+        </div>
+        <div id="d7">
+            <button id="i5" onclick="window.location.href='https://twitter.com/almnshaltlymyhllastadhmhmwdfar'">يوت يوب</button>
+        </div>
     </div>
 
 </body>
