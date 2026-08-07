@@ -15,13 +15,11 @@
             line-height: 50px;
             background-color: rgb(162, 165, 158);
 
-
             /* التوسيط في المنتصف أفقياً */
             margin: 0 auto;
         }
 
         #d0 {
-
             display: flex;
             justify-content: center;
             /* وضع المربعين في منتصف الشاشة */
@@ -41,8 +39,6 @@
             text-align: center;
             padding: 100px;
             background-image: url("./Screenshot\ \(51\)\ -\ Copy.png");
-
-
         }
 
         #d2 {
@@ -55,8 +51,6 @@
             background-repeat: no-repeat;
             text-align: center;
             padding: 100px;
-
-
         }
 
         button {
@@ -64,17 +58,36 @@
             height: 100px;
             justify-content: center;
             margin-top: 20px;
+            font-size: 20px;
+            /* يمكنك زيادة الرقم حسب رغبتك مثل 22px أو 24px */
+            font-weight: bold;
+            /* اختيار اختياري لجعل الخط عريضًا */
         }
 
         button:hover {
             color: rgb(224, 220, 231);
-        }
-         button:hover {
             background-color: rgba(45, 8, 104, 0.411);
         }
 
+        /* تعديل المبدل من .d3 إلى #d3 لتتحرك العنصر بدقة */
+        #d3 {
+            position: absolute;
+            bottom: 80px;
+            /* يبعد 80px من الأعلى بدقة */
+            right: 20px;
+            /* يبعد 20px من اليمين بدقة */
+            width: 200px;
+            height: 100px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+        }
+
         body {
- 
             background-image: url("./Screenshot\ \(53\).png");
             background-repeat: no-repeat;
             background-size: 100% 150%;
@@ -82,20 +95,22 @@
     </style>
 </head>
 
-
 <body>
-    <h1>منصه الشيخ محمود فاروق</h1>
+    <h1>منصه الاستاذ محمود فاروق</h1>
     <div id="d0">
-        <div id="d1">
+        <!--<div id="d1">
             <button onclick="window.location.href='quran.html'">القران الكريم و العلوم الشرعيه</button>
-        </div>
+        </div>--->
         <div id="d2">
             <button onclick="window.location.href='math.html'">الرياضيات</button>
         </div>
+        <div id="d3">
+            <button id="i1"
+                onclick="window.location.href='mailto:example@gmail.com?subject=استفسار&body=مرحبًا،%20أود%20الاستفسار%20عن...'">أرسل
+                بريدًا إلكترونيًا</button>
+        </div>
+
     </div>
-
-
-
 
 </body>
 
