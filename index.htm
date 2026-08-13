@@ -1,174 +1,159 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المنصه التعليميه للاستاذ محمود فاروق</title>
+    <title>منصة الأستاذ محمود فاروق</title>
     <style>
-        h1 {
-            border: 5px solid rgb(45, 8, 104);
-            width: 50%;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            background-color: rgb(162, 165, 158);
-            margin: 0 auto;
-        }
-
-        #d0 {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 30px;
-        }
-
-        #d1 {
-            display: inline-block;
-            width: 200px;
-            height: 100px;
-            background-position: center right;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            text-align: center;
-            padding: 100px;
-            background-image: url("./Screenshot\ \(51\)\ -\ Copy.png");
-        }
-
-        #d2 {
-            display: inline-block;
-            width: 200px;
-            height: 100px;
-            background-image: url("./Screenshot\ \(49\).png");
-            background-position: center left;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            text-align: center;
-            padding: 100px;
-        }
-
-        button {
-            width: 200px;
-            height: 100px;
-            justify-content: center;
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        button:hover {
-            color: rgb(224, 220, 231);
-            background-color: rgba(45, 8, 104, 0.411);
-        }
-
-        /* تحريك الزرار الأول بشكل مستقل */
-        #d3 {
-            position: absolute;
-            bottom: 70px;
-            right: 20px;
-            width: 200px;
-            height: 100px;
-        }
-
-        /* تحريك الزرار الثاني بشكل مستقل تمامًا */
-        #d4 {
-            position: absolute;
-            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
-            right: 240px;  /* اضبط المسافة من اليمين بشكل مستقل */
-            width: 200px;
-            height: 100px;
-        }
-         #d5 {
-            position: absolute;
-            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
-            right: 460px;  /* اضبط المسافة من اليمين بشكل مستقل */
-            width: 200px;
-            height: 100px;
-        }
-        #d6 {
-            position: absolute;
-            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
-            right: 680px;  /* اضبط المسافة من اليمين بشكل مستقل */
-            width: 200px;
-            height: 100px;
-        }
-        #d7 {
-            position: absolute;
-            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
-            right: 900px;  /* اضبط المسافة من اليمين بشكل مستقل */
-            width: 200px;
-            height: 100px;
-        }
-        #d8 {
-            position: absolute;
-            bottom: 70px; /* اضبط الارتفاع من الأسفل كما تريد */
-            right: 1150px;  /* اضبط المسافة من اليمين بشكل مستقل */
-            width: 200px;
-            height: 100px;
-        }
-
-        .container {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            background-color: #f0f0f0;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-image: url("./Screenshot\ \(53\).png");
+            font-family: Arial, sans-serif;
+            background-image: url("./Screenshot (53).png");
             background-repeat: no-repeat;
-            background-size: 100% 150%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* توزيع العناصر: فوق، في النص، وتحت */
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        /* 1. العنوان في أعلى الصفحة */
+        h1 {
+            border: 4px solid rgb(45, 8, 104);
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            background-color: rgba(162, 165, 158, 0.95);
+            padding: 10px 20px;
+            font-size: clamp(18px, 3.5vw, 26px);
+            font-weight: bold;
+        }
+
+        /* 2. كارت الرياضيات بالسبورة في المنتصف */
+        .middle-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .math-card {
+            width: 100%;
+            max-width: 480px;
+            height: 260px;
+            background-image: url("./Screenshot (49).png"); /* صورة السبورة */
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .math-card button {
+            width: 180px;
+            height: 80px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgba(240, 240, 240, 0.95);
+            border: 1px solid #777;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .math-card button:hover {
+            background-color: rgba(45, 8, 104, 0.85);
+            color: white;
+        }
+
+        /* 3. شريط أزرار التواصل في أسفل الصفحة */
+        .bottom-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 1300px;
+            margin-bottom: 10px;
+        }
+
+        .bottom-buttons button {
+            flex: 1 1 160px;
+            max-width: 200px;
+            height: 80px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgba(240, 240, 240, 0.95);
+            border: 1px solid #777;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .bottom-buttons button:hover {
+            background-color: rgba(45, 8, 104, 0.85);
+            color: white;
+        }
+
+        /* --- تعديلات شاشة الموبايل --- */
+        @media (max-width: 768px) {
+            body {
+                justify-content: flex-start;
+                gap: 20px;
+            }
+
+            .math-card {
+                max-width: 330px;
+                height: 190px;
+            }
+
+            .math-card button {
+                width: 140px;
+                height: 60px;
+                font-size: 17px;
+            }
+
+            .bottom-buttons button {
+                flex: 1 1 42%; /* ينزل كل زرين جنب بعض على الشاشات الصغيره بانتظام */
+                max-width: 100%;
+                height: 60px;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- الجزء العلوي -->
     <h1>منصه الاستاذ محمود فاروق</h1>
-    
-    <div id="d0">
-        <!--<div id="d1">
-            <button onclick="window.location.href='quran.html'">القران الكريم و العلوم الشرعيه</button>
-        </div>--->
-        
-        <div id="d2">
+
+    <!-- الجزء الأوسط (زر الرياضيات داخل السبورة) -->
+    <div class="middle-section">
+        <div class="math-card">
             <button onclick="window.location.href='math.html'">الرياضيات</button>
         </div>
+    </div>
 
-       
-       
-        <div id="d3">
-           <button id="i1" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=alansh3ltlymyhllastadhmhwmdfar@gmail.com', '_blank')">بريدًا إلكترونيًا</button>
-        </div>
-
-        <!-- تم إخراج d4 ليصبح عنصرًا مستقلًا وليس داخل d3 -->
-       
-       
-        <div id="d4">
-            <button id="i2" onclick="window.location.href='https://linktr.ee/almnshaltlymyhllastadhmhmwdfar'">جميع
-                وسائل التواصل</button>
-        </div>
-        
-        
-        <div id="d5">
-            <button id="i3" onclick="window.location.href='https://www.instagram.com/mnshlstdhmhmwd/'">Instagram</button>
-        </div>
-        
-        
-        <div id="d6">
-            <button id="i4" onclick="window.location.href='https://www.facebook.com/profile.php?id=61593142946300&locale=ar_AR'">فيس بوك</button>
-        </div>
-        
-        
-        <div id="d7">
-            <button id="i5" onclick="window.location.href='https://twitter.com/almnshaltlymyhllastadhmhmwdfar'">يوت يوب</button>
-        </div>
-          <div id="d8">
-            <button id="i3" onclick="window.location.href='https://t.me/mahmod765y8'">تلجرام</button>
-        </div>
-        
-        
-
-
+    <!-- الجزء السفلي (أزرار التواصل) -->
+    <div class="bottom-buttons">
+        <button onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=alansh3ltlymyhllastadhmhwmdfar@gmail.com', '_blank')">بريدًا إلكترونيًا</button>
+        <button onclick="window.location.href='https://linktr.ee/almnshaltlymyhllastadhmhmwdfar'">جميع وسائل التواصل</button>
+        <button onclick="window.location.href='https://www.instagram.com/mnshlstdhmhmwd/'">Instagram</button>
+        <button onclick="window.location.href='https://www.facebook.com/profile.php?id=61593142946300&locale=ar_AR'">فيس بوك</button>
+        <button onclick="window.location.href='https://twitter.com/almnshaltlymyhllastadhmhmwdfar'">يوت يوب</button>
+        <button onclick="window.location.href='https://t.me/mahmod765y8'">تلجرام</button>
     </div>
 
 </body>
